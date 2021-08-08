@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vehicles",
+  "info": {
+    "name": "vehicle"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Truck": {
+      "type": "component",
+      "repeatable": true,
+      "component": "truck.truck"
+    }
+  }
+}

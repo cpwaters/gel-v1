@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_truck_trucks",
+  "info": {
+    "name": "Truck",
+    "icon": "shuttle-van"
+  },
+  "options": {},
+  "attributes": {
+    "Make": {
+      "type": "string"
+    },
+    "Model": {
+      "type": "string"
+    }
+  }
+}
