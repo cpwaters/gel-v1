@@ -1,0 +1,45 @@
+.inventory {
+    margin-bottom:3rem;
+    &_individual {
+        display: flex;
+        flex-direction: column;
+        width: 33%;
+       
+        border-radius: 3px;
+
+        &-image {
+            max-width:100%;
+            height:100%;
+        }
+
+        &-title {
+            padding: 20px 10px;
+            color:#fff;
+            background: #663399;
+            margin:0;
+            font-size:18px;
+        }
+
+        &-details {
+            list-style-type: none;
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 0px;
+            padding: 10px;
+            color:#333;
+            font-size: 14px;
+            border-bottom:1px solid #eee;
+
+            li {
+                margin-bottom:10px;
+            }
+
+            h2 {
+               
+            }
+        }
+
+    }
+}

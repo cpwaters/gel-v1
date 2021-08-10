@@ -12,10 +12,42 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Truck": {
-      "type": "component",
-      "repeatable": true,
-      "component": "truck.truck"
+    "Make": {
+      "type": "string"
+    },
+    "Model": {
+      "type": "string"
+    },
+    "Sold": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Registration": {
+      "type": "string"
+    },
+    "Year": {
+      "type": "string"
+    },
+    "Price": {
+      "type": "integer"
     }
   }
 }

@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_stock_stocks",
+  "info": {
+    "name": "stock",
+    "icon": "cogs"
+  },
+  "options": {},
+  "attributes": {
+    "Make": {
+      "type": "string"
+    },
+    "Model": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Price": {
+      "type": "decimal"
+    },
+    "Sold": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "dist": {
+      "type": "email",
+      "default": "cp-waters@hotmail.co.uk"
+    }
+  }
+}

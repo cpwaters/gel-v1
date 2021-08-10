@@ -5,18 +5,14 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const Vehicles = ({ data }) => (
+const Machines = ({ data }) => (
   <Layout>
-    <Seo title="Vehicles" />
-    <h1>Vehicles</h1>
+    <Seo title="Machines" />
+    <h1>Machines</h1>
     <div className="inventory">
-        {data.allStrapiVehicles.edges.map(machine => (
+        {data.allStrapiMachines.edges.map((machine,i) => (
           <div className="inventory_individual" key={machine.id}>
-            <Img 
-            className="inventory_individual-image" 
-            fluid={machine.node.image[0].localFile.childImageSharp.fluid}  
-            alt={''}
-            />
+            <Img fluid={machine.node.Image[0].localFile.childImageSharp.fluid} alt={''}/>
             <h2 className="inventory_individual-title">{machine.node.Make} - {machine.node.Model}</h2>
             <ul className="inventory_individual-details">
               <li>{machine.node.Description}</li>
@@ -30,32 +26,32 @@ const Vehicles = ({ data }) => (
   </Layout>
 )
 
-export default Vehicles
+export default Machines
 
 export const query = graphql`
-query VehicleQuery {
-  allStrapiVehicles {
+query MachineQuery {
+  allStrapiMachines {
     edges {
       node {
-        id
-        image {
-          localFile {
-            childImageSharp {
-              fluid(maxWidth: 500){
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
         Description
         Make
         Model
         Price
-        Registration
         Sold
-        created_at(formatString: "MM/YYYY")
-        Year
+        id
         published_at(formatString: "MM/YYYY")
+        Image {
+          id
+          url
+          alternativeText
+          localFile {
+            childImageSharp {
+                fluid(maxWidth: 500){
+                    ...GatsbyImageSharpFluid
+                  }
+            }
+          }
+        }
       }
     }
   }

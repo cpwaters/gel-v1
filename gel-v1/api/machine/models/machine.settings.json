@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
-      "type": "string"
-    },
     "Description": {
       "type": "richtext"
     },
@@ -22,7 +19,12 @@
       "type": "decimal"
     },
     "Sold": {
-      "type": "boolean"
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ],
+      "default": "No"
     },
     "Image": {
       "collection": "file",
@@ -35,6 +37,12 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "Make": {
+      "type": "string"
+    },
+    "Model": {
+      "type": "string"
     }
   }
 }
