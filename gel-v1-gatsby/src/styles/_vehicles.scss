@@ -1,5 +1,11 @@
 .inventory {
-    margin-bottom:3rem;
+    
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
     &_individual {
         display: flex;
         flex-direction: column;
