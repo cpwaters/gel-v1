@@ -3,8 +3,8 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Layout from "../components/Layout"
+import Seo from "../components/Seo"
 
 const IndexPage = () => (
   <Layout>
@@ -15,6 +15,8 @@ const IndexPage = () => (
   
       <Link to="/vehicles/">Go to Vehicles</Link> <br />
       <Link to="/machines/">Go to Machines</Link> <br />
+      <Link to="/parts/">Go to Parts</Link> <br />
+      <Link to="/agricultural/">Go to Agriculture</Link> <br />
   </Layout>
 )
 

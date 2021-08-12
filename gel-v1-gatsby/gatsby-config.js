@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Truck Services LTD - GELv1`,
+    title: `PVMA Marketplace - GELv1`,
     description: `Kicking off a new headless CMS/front-end colab for a specialist e-comm and inventory store`,
     author: `@gatsbyjs / Strapi / Chris Waters`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
@@ -18,6 +18,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -41,12 +48,18 @@ module.exports = {
         collectionTypes: [
           `vehicles`,
           `machines`,
-          `user`
+          `user`, 
+          `parts`,
+          `agriculturals`,
+          `categories`
         ],
         contentTypes: [
           `vehicles`,
           `machines`,
-          `user`
+          `user`,
+          `parts`,
+          `agriculturals`,
+          `categories`
         ],
         queryLimit: 1000,
       },
@@ -56,4 +69,7 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
   ],
+  flags: {
+    THE_FLAG: false
+  }
 }

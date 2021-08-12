@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "name": "categories",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "agriculturals": {
+      "collection": "agricultural"
+    },
+    "machines": {
+      "collection": "machine"
+    },
+    "vehicle": {
+      "model": "vehicle"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

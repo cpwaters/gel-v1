@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "vehicles",
+  "collectionName": "agriculturals",
   "info": {
-    "name": "vehicle",
-    "description": ""
+    "name": "Agricultural"
   },
   "options": {
     "increments": true,
@@ -18,6 +17,18 @@
     "Model": {
       "type": "string"
     },
+    "Description": {
+      "type": "richtext"
+    },
+    "Price": {
+      "type": "decimal"
+    },
+    "SerialNo": {
+      "type": "string"
+    },
+    "Added": {
+      "type": "date"
+    },
     "Sold": {
       "type": "enumeration",
       "enum": [
@@ -25,7 +36,7 @@
         "No"
       ]
     },
-    "image": {
+    "Image": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [
@@ -36,25 +47,6 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
-    },
-    "Description": {
-      "type": "richtext"
-    },
-    "Registration": {
-      "type": "string"
-    },
-    "Year": {
-      "type": "string"
-    },
-    "Price": {
-      "type": "integer"
-    },
-    "category": {
-      "model": "category"
-    },
-    "Slug": {
-      "type": "uid",
-      "targetField": "Registration"
     }
   }
 }

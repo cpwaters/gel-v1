@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "vehicles",
+  "collectionName": "parts",
   "info": {
-    "name": "vehicle",
+    "name": "Parts",
     "description": ""
   },
   "options": {
@@ -18,14 +18,13 @@
     "Model": {
       "type": "string"
     },
-    "Sold": {
-      "type": "enumeration",
-      "enum": [
-        "Yes",
-        "No"
-      ]
+    "PartNumber": {
+      "type": "string"
     },
-    "image": {
+    "Description": {
+      "type": "richtext"
+    },
+    "Image": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [
@@ -37,24 +36,18 @@
       "required": false,
       "pluginOptions": {}
     },
-    "Description": {
-      "type": "richtext"
+    "Sold": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
     },
-    "Registration": {
-      "type": "string"
-    },
-    "Year": {
-      "type": "string"
+    "Added": {
+      "type": "date"
     },
     "Price": {
-      "type": "integer"
-    },
-    "category": {
-      "model": "category"
-    },
-    "Slug": {
-      "type": "uid",
-      "targetField": "Registration"
+      "type": "decimal"
     }
   }
 }

@@ -2,15 +2,15 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import Layout from "../components/Layout"
-import Seo from "../components/Seo"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
 
 const Machines = ({ data }) => (
   <Layout>
-    <Seo title="Machines" />
-    <h1>Machines</h1>
+    <Seo title="Agriculturals" />
+    <h1>Agriculturals</h1>
     <div className="inventory">
-        {data.allStrapiMachines.edges.map((machine,i) => (
+        {data.allStrapiAgriculturals.edges.map((machine,i) => (
           <div className="inventory_individual" key={machine.id}>
             <Img fluid={machine.node.Image[0].localFile.childImageSharp.fluid} alt={''}/>
             <h2 className="inventory_individual-title">{machine.node.Make} - {machine.node.Model}</h2>
@@ -29,8 +29,8 @@ const Machines = ({ data }) => (
 export default Machines
 
 export const query = graphql`
-query MachineQuery {
-  allStrapiMachines {
+query AgriQuery {
+  allStrapiAgriculturals {
     edges {
       node {
         Description

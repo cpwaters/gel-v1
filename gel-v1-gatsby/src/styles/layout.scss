@@ -1,4 +1,7 @@
-@import 'index.scss';
-@import 'global.scss';
-@import 'vehicles.scss';
+@use 'variables';
+@use 'navbar';
+@use 'index';
+@use 'global';
+@use 'card';
+
 

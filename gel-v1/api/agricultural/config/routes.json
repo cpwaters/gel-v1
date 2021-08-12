@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/agriculturals",
+      "handler": "agricultural.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/agriculturals/count",
+      "handler": "agricultural.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/agriculturals/:id",
+      "handler": "agricultural.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/agriculturals",
+      "handler": "agricultural.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/agriculturals/:id",
+      "handler": "agricultural.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/agriculturals/:id",
+      "handler": "agricultural.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
