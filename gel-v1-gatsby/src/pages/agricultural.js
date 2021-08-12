@@ -10,16 +10,16 @@ const Machines = ({ data }) => (
     <Seo title="Agriculturals" />
     <h1>Agriculturals</h1>
     <div className="inventory">
-        {data.allStrapiAgriculturals.edges.map((machine,i) => (
-          <div className="inventory_individual" key={machine.id}>
-            <Img fluid={machine.node.Image[0].localFile.childImageSharp.fluid} alt={''}/>
-            <h2 className="inventory_individual-title">{machine.node.Make} - {machine.node.Model}</h2>
+        {data.allStrapiAgriculturals.edges.map((res,i) => (
+          <Link className="inventory_individual" key={res.id} to={`/stock/${res.node.id}`}>
+            <Img fluid={res.node.Image[0].localFile.childImageSharp.fluid} alt={''}/>
+            <h2 className="inventory_individual-title">{res.node.Make} - {res.node.Model}</h2>
             <ul className="inventory_individual-details">
-              <li>{machine.node.Description}</li>
-              {machine.node.Sold === 'No' ? <h2>£ {machine.node.Price}</h2> : <h2>Sold</h2>}
-              <li>Added: {machine.node.published_at}</li>
+              <li>{res.node.Description}</li>
+              {res.node.Sold === 'No' ? <h2>£ {res.node.Price}</h2> : <h2>Sold</h2>}
+              <li>Added: {res.node.published_at}</li>
             </ul>
-          </div>
+          </Link>
         ))}
       </div>
     <Link to="/">Go back to the homepage</Link>

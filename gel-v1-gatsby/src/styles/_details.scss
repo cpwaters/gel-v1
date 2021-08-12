@@ -1,0 +1,26 @@
+.details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+
+    img {
+    
+    }
+
+    &_left {
+        display: flex;
+        width: 100%;
+        
+    }
+    &_right {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0 20px;
+        margin: 0 3%;
+        background: #eee;
+    }
+}

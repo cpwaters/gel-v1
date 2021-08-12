@@ -1,0 +1,15 @@
+.table {
+    margin-top: 3%;
+    width:100%;
+    height:auto;
+
+    &_cell {
+        border-bottom: 1px solid #ddd;
+        padding: 6px 0;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        font-size:15px;
+        font-weight: 100;
+    }
+}

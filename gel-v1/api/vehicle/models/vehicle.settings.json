@@ -13,10 +13,12 @@
   "pluginOptions": {},
   "attributes": {
     "Make": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Model": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Sold": {
       "type": "enumeration",
@@ -25,7 +27,7 @@
         "No"
       ]
     },
-    "image": {
+    "Image": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [
@@ -38,13 +40,15 @@
       "pluginOptions": {}
     },
     "Description": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "Registration": {
       "type": "string"
     },
     "Year": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Price": {
       "type": "integer"
@@ -55,6 +59,49 @@
     "Slug": {
       "type": "uid",
       "targetField": "Registration"
+    },
+    "Added": {
+      "type": "date"
+    },
+    "Colour": {
+      "type": "string",
+      "default": "-"
+    },
+    "Mileage": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "Gearbox": {
+      "type": "enumeration",
+      "enum": [
+        "Manual",
+        "Auto"
+      ],
+      "default": "Auto"
+    },
+    "Axle": {
+      "type": "string",
+      "default": "-"
+    },
+    "Euro": {
+      "type": "string",
+      "default": "-"
+    },
+    "Vin": {
+      "type": "string",
+      "default": "-"
+    },
+    "GrossWeight": {
+      "type": "string",
+      "default": "-"
+    },
+    "NetWeight": {
+      "type": "string",
+      "default": "-"
+    },
+    "Suspension": {
+      "type": "string",
+      "default": "-"
     }
   }
 }

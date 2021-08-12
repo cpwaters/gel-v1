@@ -37,36 +37,62 @@ exports.createPages = async ({ graphql, actions }) => {
           }
     `)
 
+    let allStrapiData = [];
+
     data.allStrapiAgriculturals.edges.forEach(res => {
-        actions.createPage({
-            path: '/agricultural/' + res.node.id,
-            component: path.resolve('./src/templates/details.js'),
-            context: { id: res.node.id }
-        })
+      allStrapiData.push(res);
     })
-
     data.allStrapiMachines.edges.forEach(res => {
-        actions.createPage({
-            path: '/machines/' + res.node.id,
-            component: path.resolve('./src/templates/details.js'),
-            context: { id: res.node.id }
-        })
+      allStrapiData.push(res);
     })
-
     data.allStrapiParts.edges.forEach(res => {
-        actions.createPage({
-            path: '/parts/' + res.node.id,
-            component: path.resolve('./src/templates/details.js'),
-            context: { id: res.node.id }
-        })
+      allStrapiData.push(res);
+
+    })
+    data.allStrapiVehicles.edges.forEach(res => {
+      allStrapiData.push(res);
+      
+    })
+    
+    allStrapiData.forEach(res => {
+      actions.createPage({
+          path: '/stock/' + res.node.id,
+          component: path.resolve('./src/templates/details.js'),
+          context: { id: res.node.id }
+      })
     })
 
-    data.allStrapiVehicles.edges.forEach(res => {
-        actions.createPage({
-            path: '/vehicles/' + res.node.id,
-            component: path.resolve('./src/templates/details.js'),
-            context: { id: res.node.id }
-        })
-    })
+
+    // data.allStrapiAgriculturals.edges.forEach(res => {
+    //     actions.createPage({
+    //         path: '/agricultural/' + res.node.id,
+    //         component: path.resolve('./src/templates/details.js'),
+    //         context: { id: res.node.id }
+    //     })
+    // })
+
+    // data.allStrapiMachines.edges.forEach(res => {
+    //     actions.createPage({
+    //         path: '/machines/' + res.node.id,
+    //         component: path.resolve('./src/templates/details.js'),
+    //         context: { id: res.node.id }
+    //     })
+    // })
+
+    // data.allStrapiParts.edges.forEach(res => {
+    //     actions.createPage({
+    //         path: '/parts/' + res.node.id,
+    //         component: path.resolve('./src/templates/details.js'),
+    //         context: { id: res.node.id }
+    //     })
+    // })
+
+    // data.allStrapiVehicles.edges.forEach(res => {
+    //     actions.createPage({
+    //         path: '/vehicles/' + res.node.id,
+    //         component: path.resolve('./src/templates/details.js'),
+    //         context: { id: res.node.id }
+    //     })
+    // })
 
 }

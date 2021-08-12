@@ -13,7 +13,7 @@ const Parts = ({ data }) => (
     <h1>Parts</h1>
     <div className="inventory">
           {data.allStrapiParts.edges.map(res => (
-              <div className="inventory_individual" key={res.id}>
+              <Link className="inventory_individual" key={res.id} to={`/stock/${res.node.id}`}>
                 <Img 
                 className="inventory_individual-image" 
                 fluid={res.node.Image[0].localFile.childImageSharp.fluid}  
@@ -25,7 +25,7 @@ const Parts = ({ data }) => (
                   {res.node.Sold === 'No' ? <h2>£ {res.node.Price}</h2> : <h2>Sold</h2>}
                   <li>Added: {res.node.published_at}</li>
                 </ul>
-              </div>
+              </Link>
             ))}
           </div> 
     <Link to="/">Go back to the homepage</Link>
